@@ -1,55 +1,31 @@
-# Allay Java Plugin Template
+# Chat Formatter
 
-Welcome to the java plugin template for allay.
+A simple chat formatter plugin for Allay
 
-## Prerequisites
+## Features
 
-- Java21 or higher.
-- Allay installed.
+- Custom format for chat/join/quit messages
+- Support PlaceholderAPI
+- Added PAPI variable `{message}` which represents the last message the player sent
 
-## Getting Started
+## Command
 
-1. **Clone this Repository**
+- `/chatformat` or `/cf`
+- `/cf [chat|join|quit] <format>` to set the format for chat/join/quit messages
+- `/cf reload` to reload 
 
-```bash
-git clone https://github.com/AllayMC/JavaPluginTemplate.git
-```
-   
-2. **Navigate to the Cloned Directory**
+## Config Example
 
-```bash
-cd JavaPluginTemplate
-```
-   
-3. **Change Plugin Information**
-
-- Rename package name from `org.allaymc.javaplugintemplate` to `your.group.name.and.pluginname`
-- Update [build.gradle.kts](build.gradle.kts) and [settings.gradle.kts](settings.gradle.kts)
-- Reload gradle
-   
-4. **Build and Run Your Plugin**
-
-```bash
-gradlew shadowJar
-```
-   
-This command will produce a `.jar` file in the `build/libs` directory. 
-Copy the `.jar` file to the `plugins` directory of your allay server.
-Start the allay server and check the logs to ensure your plugin loads and operates
-as expected.
-
-5. **Test Your Plugin in Gradle**
-
-```bash
-gradlew runServer
+`config.yml`:
+```yml
+chat-format: "[{device_os}][{mc_version}][{ping}ms]<{player_name}> {message}"
+join-message-format: '[§a+§f] {player_name}'
+quit-message-format: '[§c-§f] {player_name}'
 ```
 
-This command will start an allay server with your plugin loaded.
-Then close allay server by clicking `X` in the dashboard window.
+## Dependencies
 
-## Documentation
-
-For a deeper dive into the Allay API and its functionalities, please refer to our [documentation](https://docs.allaymc.org) (WIP).
+- [PlaceholderAPI](https://github.com/AllayMC/PlaceholderAPI)
 
 ## License
 

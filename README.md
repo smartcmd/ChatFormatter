@@ -1,5 +1,7 @@
 # Chat Formatter
 
+![img.png](img.png)
+
 A simple chat formatter plugin for Allay
 
 ## Features
@@ -18,9 +20,9 @@ A simple chat formatter plugin for Allay
 
 `config.yml`:
 ```yml
-chat-format: "[{device_os}][{mc_version}][{ping}ms]<{player_name}> {message}"
-join-message-format: '[§a+§f] {player_name}'
-quit-message-format: '[§c-§f] {player_name}'
+chat-format: '[§a{device_os}§r][§b{mc_version}§r][§d{ping}ms§r]<{player_name}> {message}'
+join-message-format: '[§a+§r] {player_name}'
+quit-message-format: '[§c-§r] {player_name}'
 ```
 
 ## Dependencies

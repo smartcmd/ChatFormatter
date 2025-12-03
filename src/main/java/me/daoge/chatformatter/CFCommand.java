@@ -18,7 +18,7 @@ public class CFCommand extends Command {
     @Override
     public void prepareCommandTree(CommandTree tree) {
         tree.getRoot()
-                .enumClass("msg_type", MsgType.class)
+                .enumClass("msgtype", MsgType.class)
                 .str("format")
                 .exec(ctx -> {
                     MsgType type = ctx.getResult(0);

@@ -1,6 +1,6 @@
 plugins {
     id("java-library")
-    id("org.allaymc.gradle.plugin") version "0.2.0"
+    id("org.allaymc.gradle.plugin") version "0.2.1"
 }
 
 group = "me.daoge.chatformatter"

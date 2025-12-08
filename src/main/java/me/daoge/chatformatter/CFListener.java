@@ -2,6 +2,7 @@ package me.daoge.chatformatter;
 
 import org.allaymc.api.eventbus.EventHandler;
 import org.allaymc.api.eventbus.event.player.PlayerChatEvent;
+import org.allaymc.api.eventbus.event.server.PlayerJoinEvent;
 import org.allaymc.api.eventbus.event.server.PlayerQuitEvent;
 import org.allaymc.api.eventbus.event.server.PlayerSpawnEvent;
 import org.allaymc.papi.PlaceholderAPI;
@@ -35,7 +36,7 @@ public class CFListener {
     }
 
     @EventHandler
-    protected void onPlayerSpawn(PlayerSpawnEvent event) {
+    protected void onPlayerJoin(PlayerJoinEvent event) {
         var player = event.getPlayer();
         event.setJoinMessage(this.papi.setPlaceholders(player.getControlledEntity(), ChatFormatter.getInstance().getConfig().joinMessageFormat()));
     }

@@ -5,7 +5,7 @@ plugins {
 
 group = "me.daoge.chatformatter"
 description = "A simple chat formatter plugin for Allay"
-version = "0.2.0-SNAPSHOT"
+version = "0.2.0"
 
 java {
     toolchain {
@@ -14,7 +14,7 @@ java {
 }
 
 allay {
-    api = "0.18.0-SNAPSHOT"
+    api = "0.18.0"
 
     plugin {
         entrance = ".ChatFormatter"
